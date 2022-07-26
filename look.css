@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    margin: 250px;
+}
+
+.coffee-card > img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
