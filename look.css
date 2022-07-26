@@ -6,7 +6,9 @@ body {
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
-    margin: 250px;
+    margin-top: 233px;
+    place-content: center;
+    gap: 26px;
 }
 
 .coffee-card > img {
