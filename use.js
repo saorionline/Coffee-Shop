@@ -1,75 +1,65 @@
 //Javascript
-const mainBox = document.querySelector('.cards-container');
+const secondSection =document.getElementById('search-user-buy')
+const firstCover = document.getElementById('promo-bar');
 
-const coffees = []
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    });
-coffees.push( {
-        name: 'Coffee',
-        price: 5500,
-        image: 'https://images.pexels.com/photos/849645/pexels-photo-849645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    });
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/133553/pexels-photo-133553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-});
+let glassUser
+let launchNew
 
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/6312318/pexels-photo-6312318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\n',
-});
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/12821516/pexels-photo-12821516.jpeg?auto=compress&cs=tinysrgb&w=600',
-});
-
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: '            https://images.pexels.com/photos/1131373/pexels-photo-1131373.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
-});
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/302888/pexels-photo-302888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-});
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: ' https://images.pexels.com/photos/6377344/pexels-photo-6377344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-});
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/10065062/pexels-photo-10065062.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
-});
-coffees.push( {
-    name: 'Coffee',
-    price: 5500,
-    image: 'https://images.pexels.com/photos/8205418/pexels-photo-8205418.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load\n',
-});
-
-
-
-function renderMenu(array){
-    for (coffee of coffees) {
-        // coffee = { name, price, image} -> coffee.image
-        const coffeeCard = document.createElement('div');
-        const coffeeImage = document.createElement('img');
-
-        coffeeCard.classList.add('coffee-card');
-        coffeeImage.setAttribute('src', coffee.image);
-        // moves the child from its current position to the new position
-        coffeeCard.appendChild(coffeeImage);
-        mainBox.appendChild(coffeeCard);
-
+let treeOfIcons = []
+let growerCards = []
+//interactivity
+class treeOfIcon {
+    constructor(name){
+        this.name = name
     }
 }
+let firstDesign = new treeOfIcon('Glam Beige')
+treeOfIcons.push(firstDesign)
+// discounts
+class growerCard {
+    constructor(name) {
+        this.name = name
+    }
+}
+let firstCard = new growerCard('January')
+growerCards.push(firstCard)
+function promoBar() {
 
-renderMenu(coffees);
+    //Promotions and interactive activities bar
+    growerCards.forEach((growerCard) => {
+        //marketPromo
+        launchNew = `
+        <header >
+            <p> ASK FOR A 3C IN OUR LOCAL STORES AND HAVE A 20% DISCOUNT IF YOU FIND +9 COFFEE GROWERS 
+            </p>  
+           
+        </header>
+        `
+        firstCover.innerHTML += launchNew
+    })
+    orderBy()
+}
+
+function orderBy() {
+    //Search, user and buy bag
+    treeOfIcons.forEach((treeOfIcon) => {
+        // order one
+        glassUser = `
+        <ul class="nav-right-section">
+            <li class="main-input-box">    
+                <span class="s-icon" ></span>
+                <input type="text" placeholder="Buscar" >
+            </li>
+            
+            <li>
+                <i class="u-icon" ></i>
+            </li>
+            <li>
+                <i class="b-icon" ></i>
+            </li> 
+        </ul>`
+    secondSection.innerHTML += glassUser
+    })
+}
+
+window.addEventListener('load', promoBar)
