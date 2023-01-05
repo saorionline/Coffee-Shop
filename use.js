@@ -1,19 +1,27 @@
 //Javascript
+const mainGallery = document.getElementById('contain-text')
 const thirdPart = document.getElementById('logo-menu')
 const secondSection =document.getElementById('search-user-buy')
 const firstCover = document.getElementById('promo-bar');
 
+let announce
 let brandIdifier
 let glassUser
 let launchNew
 
+let importantBigs = []
 let logoSealers = []
 let treeOfIcons = []
 let growerCards = []
 
 
 
-
+//after promo, menu and logo, this part is an important link
+class importantBig{
+    constructor(name){
+        this.name = name
+    }
+}
 //menu of options
 class logoSealer {
     constructor(name) {
@@ -26,22 +34,28 @@ class treeOfIcon {
         this.name = name
     }
 }
-
-
 // discounts
 class growerCard {
     constructor(name) {
         this.name = name
     }
 }
-
+let mainSection = new importantBig('Coffee')
 let firstLogoPart = new logoSealer('Centered')
 let firstDesign = new treeOfIcon('Glam Beige')
 let firstCard = new growerCard('January')
 
+importantBigs.push(mainSection)
 logoSealers.push(firstLogoPart)
 treeOfIcons.push(firstDesign)
 growerCards.push(firstCard)
+
+function contentAttention(){
+    importantBigs.forEach((importantBig) => {
+        announce = ``
+        mainGallery.innerHTML += announce
+    })
+}
 
 function pasteLogo() {
     logoSealers.forEach((logoSealer) => {
@@ -80,6 +94,7 @@ function pasteLogo() {
                 
     thirdPart.innerHTML += brandIdifier
     })
+    contentAttention()
 }
 
 function orderBy() {
@@ -106,7 +121,7 @@ function promoBar() {
         //marketPromo
         launchNew = `
         <header >
-            <p> ASK FOR A 3C IN OUR LOCAL STORES AND HAVE A 20% DISCOUNT IF YOU FIND +9 COFFEE GROWERS 
+            <p> PIDE UNA 3C EN NUESTRAS TIENDAS LOCALES Y TEN UN 20% DE DESCUENTO SI ENCUENTRAS 9 CAFECULTORES
             </p>  
            
         </header>

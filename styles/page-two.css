@@ -14,6 +14,9 @@ body > main > div:nth-child(3) > ul {
     background-color: #fbfae7;
     list-style: none;
 }
+#logo-menu {
+    margin-bottom: 50px;
+}
 .logo-tibetano img {
     width: 180px;
     height: auto;
@@ -30,4 +33,63 @@ ul.inner-menu{
 .cube {
     width: 120px;
     height: auto;
+}
+.main-background {
+    width: 100%;
+    height: 533px;
+    object-fit: cover;
+    filter: brightness(50%);
+   
+}
+
+.contain-text {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-10%, -50%);
+    font-family: 'Voltaire', sans-serif;
+    font-size: 40px;
+    width: 666px
+  }
+.second-centered {
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    transform: translate(-13%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    border: 3px solid white;
+    padding: 10px 30px 10px 30px;
+}
+.before-closing {
+    top: 56%;
+    left: 45%;
+    transform: translate(-13%, -50%);
+    position: absolute;
+    color: white;
+    width: 163px;
+    border: none;
+    background-color:#9F8C5F;
+    padding: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+.closing-phrase {
+    top: 72%;
+    left: 37%;
+    transform: translate(-13%, -50%);
+    position: absolute;
+    color: white;
+    width: 481px;
+    border: none;
+    padding: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    border-radius: 6px;
 }
