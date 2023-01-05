@@ -1,0 +1,33 @@
+.nav-long-section {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 40px;
+    padding-left: 280px
+}
+
+body > main > div:nth-child(3) > ul {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    list-style: none;
+    color: #192e57;
+    background-color: #fbfae7;
+    list-style: none;
+}
+.logo-tibetano img {
+    width: 180px;
+    height: auto;
+}
+
+#highInt{
+    text-align: right;
+    width: 120px;
+    
+}
+ul.inner-menu{
+    list-style: none;
+}
+.cube {
+    width: 120px;
+    height: auto;
+}
